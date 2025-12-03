@@ -1,19 +1,42 @@
 import sys
+import string
+
 
 def main():
     """
-    Description
+    Program which takes a single string argument and displays the sums
+     of its upper-case characters, lower-case characters, punctuation
+     characters, digits, and spaces.
     """
-	try:
-		if len(sys.argv) == 2:
-			input = sys.argv[1]
-		elif len(sys.argv) < 2 or len(sys.argv[1]) == 0:
-			input = input("What is the text to count?")
-		else:
-			raise AssertionError("more than one argument is provided")
-	except AssertionError as error:
-		print(f"AssertionError: {error}")
-	print(f"The text contains {sum(1 for c in input)} characters:")
+    try:
+        if len(sys.argv) == 2:
+            text = sys.argv[1]
+        elif len(sys.argv) < 2 or len(sys.argv[1]) == 0:
+            try:
+                print("What is the text to count?")
+                text = ""
+                while True:
+                    c = sys.stdin.read(1)
+                    if c == "":
+                        break
+                    text += c
+                    if c == '\n':
+                        break
+            except KeyboardInterrupt:
+                raise AssertionError("Program terminated by user")
+        else:
+            raise AssertionError("more than one argument is provided")
+        print(f"The text contains {sum(1 for c in text)} characters:")
+        print(f"{sum(1 for c in text if c.isupper())} upper letters")
+        print(f"{sum(1 for c in text if c.islower())} lower letters")
+        print(f"{sum(1 for c in text if c in string.punctuation)} \
+            punctuation marks")
+        print(f"{sum(1 for c in text if c.isspace())} spaces")
+        print(f"{sum(1 for c in text if c.isdigit())}  digits")
+
+    except AssertionError as error:
+        print(f"AssertionError: {error}")
+
 
 if __name__ == "__main__":
-	main()
+    main()
