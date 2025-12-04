@@ -30,7 +30,8 @@ def ft_tqdm(lst: range) -> None:
         remain = (len_range - i) / vitesse if vitesse > 0 else 0
         print(
             f"{percent:3d}%|{bar}| {i}/{len_range} "
-            f"[{format_time(elapsed)}<{format_time(remain)}, {vitesse:05.2f}it/s] ",
+            f"[{format_time(elapsed)}<{format_time(remain)},"
+            f"{vitesse:05.2f}it/s] ",
             end="\r"
             )
         yield val

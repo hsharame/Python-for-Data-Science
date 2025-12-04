@@ -2,7 +2,7 @@
 
 ## Installation
 
-To build and install the package, follow these steps:
+To build and install the package:
 
 1. **Install the build tool**  
 ```bash
