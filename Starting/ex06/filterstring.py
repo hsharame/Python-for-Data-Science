@@ -19,7 +19,7 @@ def main():
                 if c in string.punctuation or c.isspace() and c != " ":
                     raise AssertionError("the arguments are bad")
             words = s.split()
-            filtered = ft_filter(lambda w: greater_than_n(w, n), words)
+            filtered = ft_filter(lambda w: len(w) > n, words)
             result = [w for w in filtered]
             print(result)
         else:
