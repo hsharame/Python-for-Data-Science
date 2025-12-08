@@ -1,4 +1,5 @@
 import sys
+import string
 from ft_filter import ft_filter
 
 
@@ -14,6 +15,9 @@ def main():
                 n = int(sys.argv[2])
             except ValueError:
                 raise AssertionError("the arguments are bad")
+            for c in s:
+                if c in string.punctuation or c.isspace() and c != " ":
+                    raise AssertionError("the arguments are bad")
             words = s.split()
             filtered = ft_filter(lambda w: greater_than_n(w, n), words)
             result = [w for w in filtered]
