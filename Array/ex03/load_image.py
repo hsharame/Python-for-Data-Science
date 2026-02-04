@@ -21,4 +21,4 @@ def ft_load(path: str) -> list:
     im = im.convert("RGB")
     arr = np.array(im)
     print("The shape of image is:", arr.shape)
-    return list(im.getdata())
+    return arr
