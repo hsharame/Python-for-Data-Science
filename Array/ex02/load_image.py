@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np
 import os
 
-def ft_load(path: str) -> array:
+def ft_load(path: str) -> np.ndrray:
     """
     Loads an image, prints its format, and its pixels
     content in RGB format.
