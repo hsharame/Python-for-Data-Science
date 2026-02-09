@@ -2,6 +2,7 @@ from PIL import Image
 import numpy as np
 import os
 
+
 def ft_load(path: str) -> np.ndarray:
     """
     Loads an image, prints its format, and its pixels
@@ -21,4 +22,5 @@ def ft_load(path: str) -> np.ndarray:
     im = im.convert("RGB")
     arr = np.array(im)
     print("The shape of image is:", arr.shape)
+    print(arr)
     return arr

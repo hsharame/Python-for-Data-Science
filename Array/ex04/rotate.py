@@ -3,6 +3,7 @@ from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def main():
     """
     Program loads the image "animal.jpeg", cuts a square part from it,
@@ -27,6 +28,7 @@ def main():
         plt.show()
     except Exception as error:
         print(error)
+
 
 if __name__ == "__main__":
     main()

@@ -3,6 +3,7 @@ from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def main():
     """
     Program loads the image "animal.jpeg", prints some information
@@ -25,6 +26,7 @@ def main():
         plt.show()
     except Exception as error:
         print(error)
+
 
 if __name__ == "__main__":
     main()

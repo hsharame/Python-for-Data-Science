@@ -7,7 +7,7 @@ print(bmi, type(bmi))
 print(apply_limit(bmi, 26))
 
 print("*" * 50)
-try: 
+try:
     height = [2.71, height]
     weight = [165.3, 38.4]
     bmi = give_bmi(height, weight)

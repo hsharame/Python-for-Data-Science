@@ -1,4 +1,7 @@
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+def give_bmi(
+    height: list[int | float],
+    weight: list[int | float]
+) -> list[int | float]:
     """
     Takes 2 lists of integers or floats as input and returns a list
     of BMI values.
@@ -17,7 +20,8 @@ def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int |
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     """
     Accepts a list of integers or floats and an integer representing
-    a limit as parameters. It returns a list of booleans (True if above the limit).
+    a limit as parameters. It returns a list of booleans
+    (True if above the limit).
     """
     if not isinstance(limit, int):
         raise TypeError("Limit must be an integer")

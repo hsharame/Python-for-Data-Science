@@ -2,6 +2,7 @@ from PIL import Image
 import numpy as np
 import os
 
+
 def ft_load(path: str) -> np.ndarray:
     """
     Loads an image, prints its format, and its pixels
