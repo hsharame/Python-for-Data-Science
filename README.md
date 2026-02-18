@@ -1,8 +1,15 @@
-### For venv:
+### Venv for Array:
 
 ```
-pip install pillow numpy matplotlib
+pip install pillow numpy matplotlib flake8
 ```
+
+### Venv for DataTable:
+
+```
+pip install flake8 pandas
+```
+
 
 ### Docs for DataTable:
 

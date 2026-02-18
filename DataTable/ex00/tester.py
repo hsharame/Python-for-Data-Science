@@ -1,4 +1,6 @@
 from load_csv import load
 
-
-print(load("life_expectancy_years.csv"))
+try:
+	print(load("landscape.jpg"))
+except Exception as error:
+    print(error)
