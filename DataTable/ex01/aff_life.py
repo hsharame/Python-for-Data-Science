@@ -2,6 +2,7 @@ from load_csv import load
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def main():
     """
     Program loads life_expectancy_years.csv file and
@@ -10,7 +11,6 @@ def main():
     try:
         df = load("life_expectancy_years.csv")
         line = df[df["country"] == "France"].iloc[0]
-        print(line)
 
         y = line.drop("country")
         x = y.index.astype(int)
