@@ -7,7 +7,7 @@ pip install pillow numpy matplotlib flake8
 ### Venv for DataTable:
 
 ```
-pip install flake8 pandas
+pip install flake8 pandas matplotlib numpy
 ```
 
 

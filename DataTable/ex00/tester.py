@@ -1,6 +1,6 @@
 from load_csv import load
 
 try:
-	print(load("landscape.jpg"))
+	print(load("life_expectancy_years.csv"))
 except Exception as error:
     print(error)
