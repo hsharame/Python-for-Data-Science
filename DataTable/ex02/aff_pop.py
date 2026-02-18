@@ -16,8 +16,10 @@ def parse_pop(value: str) -> float:
     except ValueError:
         return None
 
+
 def format_millions(value: float, pos: int) -> str:
     return f"{int(value / 1000000)}M"
+
 
 def main():
     """
@@ -27,7 +29,7 @@ def main():
     """
     try:
         df = load("population_total.csv")
-        line_france = df[df["country"] == "France"].iloc[0] #series
+        line_france = df[df["country"] == "France"].iloc[0]  # series
         line_belarus = df[df["country"] == "Belarus"].iloc[0]
 
         y_fr = line_france.drop("country").apply(parse_pop)
@@ -57,6 +59,7 @@ def main():
         plt.show()
     except Exception as error:
         print(error)
+
 
 if __name__ == "__main__":
     main()

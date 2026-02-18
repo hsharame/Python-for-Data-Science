@@ -7,7 +7,7 @@ pip install pillow numpy matplotlib flake8
 ### Venv for DataTable:
 
 ```
-pip install flake8 pandas matplotlib numpy
+pip install flake8 pandas matplotlib numpy mplcursors
 ```
 
 
@@ -16,3 +16,5 @@ pip install flake8 pandas matplotlib numpy
 [10 minutes to pandas](https://pandas.pydata.org/docs/user_guide/10min.html#min)
 
 [Pandas user guide](https://pandas.pydata.org/docs/user_guide/index.html)
+
+[Decorators](https://www.w3schools.com/python/python_decorators.asp)

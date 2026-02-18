@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 
-def load(path: str) -> pd.DataFrame :
+def load(path: str) -> pd.DataFrame:
     """
     Function takes a path as argument, writes the dimensions
     of the data set and returns it.
@@ -15,7 +15,7 @@ def load(path: str) -> pd.DataFrame :
         raise TypeError(f"{path}: unsupported format")
     try:
         df = pd.read_csv(path)
-    except Exception as error:
+    except Exception:
         raise Exception(f"Couldn't read {path}")
     print("Loading dataset of dimensions", df.shape)
 
