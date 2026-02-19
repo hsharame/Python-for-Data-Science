@@ -8,15 +8,19 @@ def load(path: str) -> pd.DataFrame:
     of the data set and returns it.
     """
     if not os.path.exists(path):
-        raise FileNotFoundError(f"File {path} does not exist")
+        print(f"File {path} does not exist")
+        return None
     if not os.path.isfile(path):
-        raise IsADirectoryError(f"{path} is directory")
+        print(f"{path} is directory")
+        return None
     if not path.lower().endswith((".csv")):
-        raise TypeError(f"{path}: unsupported format")
+        print(f"{path}: unsupported format")
+        return None
     try:
         df = pd.read_csv(path)
     except Exception:
-        raise Exception(f"Couldn't read {path}")
+        print(f"Couldn't read {path}")
+        return None
     print("Loading dataset of dimensions", df.shape)
 
     return df

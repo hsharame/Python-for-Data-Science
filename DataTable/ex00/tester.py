@@ -1,6 +1,7 @@
 from load_csv import load
 
 try:
-    print(load("life_expectancy_years.csv"))
+    res = load("life_expectancy_years.csv")
+    print(res)
 except Exception as error:
     print(error)
