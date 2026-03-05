@@ -15,8 +15,9 @@ print(Cersei.__dict__)
 print(Cersei.__str__)
 print(Cersei.is_alive)
 print("---")
-# Jaine = Lannister.create_lannister("Jaine", True)
-# print(f"Name : {Jaine.first_name, type(Jaine).__name__}, Alive : {Jaine.is_alive}")
+
+Jaine = Lannister.create_lannister("Jaine", True)
+print(f"Name : {Jaine.first_name, type(Jaine).__name__}, Alive : {Jaine.is_alive}")
 
 # {'first_name': 'Robert', 'is_alive': True, 'family_name': 'Baratheon', 'eyes': 'brown', 'hairs': 'dark'}
 # <bound method Baratheon.__str__ of Vector: ('Baratheon', 'brown', 'dark')>
